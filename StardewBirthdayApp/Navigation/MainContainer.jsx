@@ -38,13 +38,7 @@ function MainContainer() {
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-        })}
-        tabBarOptions={{
-          activeTintColor: '#59C9F1',
-          inactiveTintColor: '#B52121',
-          labelStyle: { paddingBottom: 10, fontSize: 10 },
-          style: { paddingTop: 5, height: 80}
-        }}>
+        })}>
 
         <Tab.Screen name={home} component={HomeScreen} />
         <Tab.Screen name={villagers} component={AllVillagers} />
