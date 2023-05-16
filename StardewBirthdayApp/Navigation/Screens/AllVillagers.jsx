@@ -1,17 +1,11 @@
 import * as React from 'react';
 import { View, Text, ImageBackground, Image } from 'react-native';
-import AbigailImage from '../../assets/villagers/Abigail.png'
+import allVillagers from '../../Villagers/villager-data';
+const AbigailImage = require('../../assets/villagers/Abigail.png')
 
 export default function AllVillagers({ navigation }) {
 
-    // const [villagers, setVillagers] = useState([])
-
-    const image = {
-        uri: 'StardewBirthdayApp/assets/villagers/Abigail.png',
-        width: 64,
-        height: 64,
-    };
-
+    console.log(allVillagers[0].image)
 
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -19,8 +13,10 @@ export default function AllVillagers({ navigation }) {
                 onPress={() => navigation.navigate('Home')}
                 style={{ fontSize: 26, fontWeight: 'bold' }}>Villagers</Text>
             {/* <Image source={{uri: `${AbigailImage}`}}/> */}
-            <Image source={{uri: 'https://reactjs.org/logo-og.png'}}
-       style={{width: 400, height: 400}} />
+            <Image source={AbigailImage}
+                style={{width: 150, height: 150}} />
+                <Image source={AbigailImage}
+                style={{width: 400, height: 400}} />
         </View>
     );
 }
