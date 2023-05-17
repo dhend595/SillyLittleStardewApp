@@ -9,15 +9,10 @@ import {
     Image
 } from 'react-native';
 import allVillagers from '../../Villagers/villager-data';
-const AbigailImage = require('../../assets/villagers/Abigail.png')
 
 export default function AllVillagers() {
 
-    // const DATA = allVillagers;
-    console.log(allVillagers);
-
     const Item = ({ name, image }) => (
-        console.log(name),
         <View>
             <Image source={image} />
             <Text>{name}</Text>
@@ -29,9 +24,11 @@ export default function AllVillagers() {
             <FlatList
                 data={allVillagers}
                 renderItem={({ item }) =>
-                    <Item name={item.name}
-                        image={item.image} />}
-                keyExtractor={item => item.id}
+                    <Item
+                     name={item.name}
+                    image={item.image}    
+                    />}
+                // keyExtractor={item => item.id}
             />
         </SafeAreaView>
     );
