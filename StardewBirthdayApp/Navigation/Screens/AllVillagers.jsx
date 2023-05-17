@@ -6,29 +6,67 @@ import {
     StyleSheet,
     Text,
     StatusBar,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
+import SingleVillager from './SingleVillager';
 import allVillagers from '../../Villagers/villager-data';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function AllVillagers() {
+
+export default function AllVillagers({navigation}) {
+
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            flexDirection: 'row',
+            backgroundColor: `#0099D0`,
+        },
+        flatList: {
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: `space-around`
+        },
+        villagerCard: {
+            backgroundColor: `#007aa6`,
+            borderRadius: 5,
+            justifyContent: `center`,
+            marginTop: 5,
+            alignItems: `center`,
+        },
+        villagerText: {
+            padding: 5,
+            fontSize: 18,
+            fontWeight: `bold`
+        }
+    })
+
+    const VillagerStack = createNativeStackNavigator()
 
     const Item = ({ name, image }) => (
-        <View>
-            <Image source={image} />
-            <Text>{name}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate(<SingleVillager/>)}>
+        <View 
+            style={styles.villagerCard}
+        >
+            <Image source={image} 
+                    onPress={() => console.log('Details')}
+            />
+            <Text style={styles.villagerText}>{name}</Text>
         </View>
+        </TouchableOpacity>
     );
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
             <FlatList
+                contentContainerStyle={styles.flatList}
                 data={allVillagers}
                 renderItem={({ item }) =>
                     <Item
                      name={item.name}
-                    image={item.image}    
+                    image={item.image}
                     />}
-                // keyExtractor={item => item.id}
             />
         </SafeAreaView>
     );
