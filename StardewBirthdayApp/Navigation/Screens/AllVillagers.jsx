@@ -1,22 +1,38 @@
 import * as React from 'react';
-import { View, Text, ImageBackground, Image } from 'react-native';
+import {
+    SafeAreaView,
+    View,
+    FlatList,
+    StyleSheet,
+    Text,
+    StatusBar,
+    Image
+} from 'react-native';
 import allVillagers from '../../Villagers/villager-data';
 const AbigailImage = require('../../assets/villagers/Abigail.png')
 
-export default function AllVillagers({ navigation }) {
+export default function AllVillagers() {
 
-    console.log(allVillagers[0].image)
+    // const DATA = allVillagers;
+    console.log(allVillagers);
+
+    const Item = ({ name, image }) => (
+        console.log(name),
+        <View>
+            <Image source={image} />
+            <Text>{name}</Text>
+        </View>
+    );
 
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => navigation.navigate('Home')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Villagers</Text>
-            {/* <Image source={{uri: `${AbigailImage}`}}/> */}
-            <Image source={AbigailImage}
-                style={{width: 150, height: 150}} />
-                <Image source={AbigailImage}
-                style={{width: 400, height: 400}} />
-        </View>
+        <SafeAreaView>
+            <FlatList
+                data={allVillagers}
+                renderItem={({ item }) =>
+                    <Item name={item.name}
+                        image={item.image} />}
+                keyExtractor={item => item.id}
+            />
+        </SafeAreaView>
     );
 }

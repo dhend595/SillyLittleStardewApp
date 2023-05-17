@@ -1,3 +1,6 @@
+
+
+
 const allVillagers = [
     {
         name: 'Alex',
@@ -10,7 +13,8 @@ const allVillagers = [
         name: 'Elliott',
         birthSeason: `Fall`,
         birthDay: 5,
-        gifts: [`Crab Cakes`, `Duck Feather`, `Lobster`, `Pomegranate`, `Squid Ink`, `Tom Kha Soup`]
+        gifts: [`Crab Cakes`, `Duck Feather`, `Lobster`, `Pomegranate`, `Squid Ink`, `Tom Kha Soup`],
+        image: `../../assets/villagers/Elliott.png`
     },
     {
         name: 'Harvey',
