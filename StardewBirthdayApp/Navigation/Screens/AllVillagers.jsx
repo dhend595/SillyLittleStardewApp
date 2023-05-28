@@ -12,7 +12,7 @@ import {
 import SingleVillager from './SingleVillager';
 import allVillagers from '../../Villagers/villager-data';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 export default function AllVillagers({navigation}) {
@@ -42,10 +42,18 @@ export default function AllVillagers({navigation}) {
         }
     })
 
-    const VillagerStack = createNativeStackNavigator()
+    const VillagerStack = createStackNavigator()
+
+    // function MyStack() {
+    //     return (
+    //       <Stack.Navigator>
+    //         <Stack.Screen name="Villager" component={} />
+    //       </Stack.Navigator>
+    //     );
+    //   }
 
     const Item = ({ name, image }) => (
-        <TouchableOpacity onPress={() => navigation.navigate(<SingleVillager/>)}>
+        <TouchableOpacity onPress={() => navigation.navigate('villager')}>
         <View 
             style={styles.villagerCard}
         >

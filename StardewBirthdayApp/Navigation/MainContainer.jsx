@@ -17,10 +17,10 @@ const Tab = createBottomTabNavigator();
 
 function MainContainer() {
   return (
-    <NavigationContainer>
       <Tab.Navigator
         initialRouteName={home}
-        screenOptions={({ route }) => ({
+        screenOptions={
+          ({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
             let routeName = route.name;
@@ -35,7 +35,6 @@ function MainContainer() {
               iconName = focused ? 'heart' : 'heart-outline';
             }
 
-            // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}>
@@ -45,15 +44,14 @@ function MainContainer() {
         <Tab.Screen name={saved} component={SavedVillagers} />
 
       </Tab.Navigator>
-    </NavigationContainer>
   );
 
-  const styles = StyleSheet.create({
-    main: {
-        display: 'flex',
-        flexDirection: 'row'
-    },
-})
+//   const styles = StyleSheet.create({
+//     main: {
+//         display: 'flex',
+//         flexDirection: 'row'
+//     },
+// })
 
 }
 

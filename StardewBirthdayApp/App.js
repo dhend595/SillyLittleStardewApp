@@ -7,7 +7,7 @@ import HomeScreen from './Navigation/Screens/Home';
 import Saved from './Navigation/Screens/Saved';
 import Search from './Search/Search'
 
-const Stack = createStackNavigator();
+// const Stack = createStackNavigator();
 
 // function SillyLittleStardewApp() {
 //   return (
@@ -20,6 +20,13 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
+    <NavigationContainer>
+      {/* <Stack.Screen
+        name="home"
+        component={MainContainer}
+        options={{ headerShown: false}}
+      /> */}
     <MainContainer/>
+    </NavigationContainer>
   );
 }
