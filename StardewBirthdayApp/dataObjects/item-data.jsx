@@ -129,3 +129,4 @@ const allGifts = [
         name: `Yellow Cake`,
         image: require(`../assets/gifts/YellowCake.png`)
     },
+]
