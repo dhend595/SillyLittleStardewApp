@@ -8,6 +8,8 @@ import {
     StatusBar,
     Image
 } from 'react-native';
+import allGifts from '../../dataObjects/item-data';
+
 
 export default function SingleVillager() {
     <View>

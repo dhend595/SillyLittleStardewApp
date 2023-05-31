@@ -1,5 +1,3 @@
-//create objects that will be used in the app from the gifts array in villager-data.jsx
-
 const allGifts = [
     {
         name: `Amethyst`,
@@ -124,9 +122,5 @@ const allGifts = [
     {
         name: `Yam`,
         image: require(`../assets/gifts/Yam.png`)
-    },
-    {
-        name: `Yellow Cake`,
-        image: require(`../assets/gifts/YellowCake.png`)
     },
 ]

@@ -10,7 +10,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 import SingleVillager from './SingleVillager';
-import allVillagers from '../../Villagers/villager-data';
+import allVillagers from '../../dataObjects/villager-data';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
