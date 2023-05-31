@@ -3,7 +3,7 @@ const allVillagers = [
         name: 'Alex',
         birthSeason: `Summer`,
         birthDay: 13,
-        gifts: [`Complete BreakFast`, `Salmon Dinner`],
+        gifts: [`Complete Breakfast`, `Salmon Dinner`],
         image: require(`../assets/villagers/Alex.png`)
     },
     {

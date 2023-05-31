@@ -44,10 +44,13 @@ export default function AllVillagers({navigation}) {
     })
 
 
-    const VillagerCard = ({ name, image }) => (
+    const VillagerCard = ({ name, image, birthDay, birthSeason, gifts }) => (
         <TouchableOpacity onPress={() => navigation.navigate('Villager', {
-            villagerName: {name},
-            villagerImage: {image},
+            name,
+            image,
+            birthDay,
+            birthSeason,
+            gifts
             })
         }>
         <View 
@@ -68,6 +71,9 @@ export default function AllVillagers({navigation}) {
                     <VillagerCard
                      name={item.name}
                      image={item.image}
+                     birthSeason={item.birthSeason}
+                     birthDay={item.birthDay}
+                     gifts={item.gifts}
                     />}
             />
         </SafeAreaView>

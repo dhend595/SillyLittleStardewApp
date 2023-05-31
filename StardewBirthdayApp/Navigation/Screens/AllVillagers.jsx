@@ -19,12 +19,14 @@ const Stack = createStackNavigator();
 
 export default function AllVillagersStack({navigation}) {
     return (
-        <Stack.Navigator
-            screenOptions={{
-                headerShown: false
-            }}>
-            <Stack.Screen name="All Villagers" component={AllVillagers} />
-            <Stack.Screen name="Villager" component={SingleVillager} />
-        </Stack.Navigator>
+        <NavigationContainer independent={true}>
+            <Stack.Navigator
+                screenOptions={{
+                    headerShown: false
+                }}>
+                <Stack.Screen name="All Villagers" component={AllVillagers} />
+                <Stack.Screen name="Villager" component={SingleVillager} />
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }

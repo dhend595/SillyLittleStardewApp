@@ -16,8 +16,24 @@ const allGifts = [
         image: require(`../assets/gifts/Beet.png`)
     },
     {
+        name: `Cactus Fruit`,
+        image: require(`../assets/gifts/CactusFruit.png`)
+    },
+    {
         name: `Chocolate Cake`,
         image: require(`../assets/gifts/ChocolateCake.png`)
+    },
+    {
+        name: `Coffee`,
+        image: require(`../assets/gifts/Coffee.png`)
+    },
+    {
+        name: `Complete Breakfast`,
+        image: require(`../assets/gifts/CompleteBreakfast.png`)
+    },
+    {
+        name: 'Crab Cakes',
+        image: require(`../assets/gifts/CrabCakes.png`)
     },
     {
         name: `Crispy Bass`,
@@ -26,6 +42,10 @@ const allGifts = [
     {
         name: `Diamond`,
         image: require(`../assets/gifts/Diamond.png`)
+    },
+    {
+        name: 'Duck Feather',
+        image: require(`../assets/gifts/DuckFeather.png`)
     },
     {
         name: `Escargot`,
@@ -64,6 +84,14 @@ const allGifts = [
         image: require(`../assets/gifts/Leek.png`)
     },
     {
+        name: 'Lobster',
+        image: require(`../assets/gifts/Lobster.png`)
+    },
+    {
+        name: `Maple Bar`,
+        image: require(`../assets/gifts/MapleBar.png`)
+    },
+    {
         name: `Omni Geode`,
         image: require(`../assets/gifts/OmniGeode.png`)
     },
@@ -72,12 +100,24 @@ const allGifts = [
         image: require(`../assets/gifts/Orange.png`)
     },
     {
+        name: `Pickles`,
+        image: require(`../assets/gifts/Pickles.png`)
+    },
+    {
         name: `Pink Cake`,
         image: require(`../assets/gifts/PinkCake.png`)
     },
     {
+        name: `Pizza`,
+        image: require(`../assets/gifts/Pizza.png`)
+    },
+    {
         name: `Plum Pudding`,
         image: require(`../assets/gifts/PlumPudding.png`)
+    },
+    {
+        name: 'Pomegranate',
+        image: require(`../assets/gifts/Pomegranate.png`)
     },
     {
         name: `Rice Pudding`,
@@ -92,12 +132,32 @@ const allGifts = [
         image: require(`../assets/gifts/Ruby.png`)
     },
     {
+        name: `Salmon Dinner`,
+        image: require(`../assets/gifts/SalmonDinner.png`)
+    },
+    {
+        name: `Squid Ink`,
+        image: require(`../assets/gifts/SquidInk.png`)
+    },
+    {
         name: `Strawberry`,
         image: require(`../assets/gifts/Strawberry.png`)
     },
     {
         name: `Stuffing`,
         image: require(`../assets/gifts/Stuffing.png`)
+    },
+    {
+        name: `Super Meal`,
+        image: require(`../assets/gifts/SuperMeal.png`)
+    },
+    {
+        name: `Tigerseye`,
+        image: require(`../assets/gifts/Tigerseye.png`)
+    },
+    {
+        name: `Tom Kha Soup`,
+        image: require(`../assets/gifts/TomKhaSoup.png`)
     },
     {
         name: `Topaz`,
@@ -108,12 +168,20 @@ const allGifts = [
         image: require(`../assets/gifts/TroutSoup.png`)
     },
     {
+        name: `Truffle Oil`,
+        image: require(`../assets/gifts/TruffleOil.png`)
+    },
+    {
         name: `Vegetable Medley`,
         image: require(`../assets/gifts/VegetableMedley.png`)
     },
     {
         name: `Wild Horseradish`,
         image: require(`../assets/gifts/WildHorseradish.png`)
+    },
+    {
+        name: `Wine`,
+        image: require(`../assets/gifts/Wine.png`)
     },
     {
         name: `Wool`,
