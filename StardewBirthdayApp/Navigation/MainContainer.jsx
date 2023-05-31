@@ -5,12 +5,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Screens
 import HomeScreen from './Screens/Home'
-import AllVillagers from './Screens/AllVillagers';
+import AllVillagersStack from './Screens/AllVillagers';
 import SavedVillagers from './Screens/Saved';
 
 //Screen names
 const home = "Home";
-const villagers = "All";
+const villagers = "Villagers";
 const saved = "Saved";
 
 const Tab = createBottomTabNavigator();
@@ -40,7 +40,7 @@ function MainContainer() {
         })}>
 
         <Tab.Screen name={home} component={HomeScreen} />
-        <Tab.Screen name={villagers} component={AllVillagers} />
+        <Tab.Screen name={villagers} component={AllVillagersStack} />
         <Tab.Screen name={saved} component={SavedVillagers} />
 
       </Tab.Navigator>

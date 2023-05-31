@@ -124,3 +124,5 @@ const allGifts = [
         image: require(`../assets/gifts/Yam.png`)
     },
 ]
+
+export default allGifts
