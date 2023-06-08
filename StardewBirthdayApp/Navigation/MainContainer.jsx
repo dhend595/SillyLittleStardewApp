@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -45,13 +44,6 @@ function MainContainer() {
 
       </Tab.Navigator>
   );
-
-//   const styles = StyleSheet.create({
-//     main: {
-//         display: 'flex',
-//         flexDirection: 'row'
-//     },
-// })
 
 }
 

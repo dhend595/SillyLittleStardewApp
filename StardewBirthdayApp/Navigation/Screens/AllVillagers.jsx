@@ -1,14 +1,4 @@
 import * as React from 'react';
-import {
-    SafeAreaView,
-    View,
-    FlatList,
-    StyleSheet,
-    Text,
-    StatusBar,
-    Image,
-    TouchableOpacity
-} from 'react-native';
 import SingleVillager from '../../villagers/SingleVillager';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

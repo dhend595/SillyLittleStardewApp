@@ -5,15 +5,10 @@ import {
     FlatList,
     StyleSheet,
     Text,
-    StatusBar,
     Image,
     TouchableOpacity
 } from 'react-native';
-import SingleVillager from './SingleVillager';
 import allVillagers from '../dataObjects/villager-data'
-import allGifts from '../dataObjects/item-data';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 
 export default function AllVillagers({navigation}) {

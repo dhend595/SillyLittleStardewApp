@@ -1,23 +1,17 @@
 import * as React from 'react'
 import {
-    SafeAreaView,
     View,
     FlatList,
-    StyleSheet,
     Text,
-    StatusBar,
     Image,
     Button
 } from 'react-native';
 import allGifts from '../dataObjects/item-data';
 
 const matchingGifts = (gifts) => {
-    console.log(gifts)
     let giftArray = [];
     gifts.forEach(gift => {
-        console.log(gift)
         allGifts.forEach(item => {
-            // console.log(item)
             if (gift === item.name) {
                 giftArray.push(item.image)
             }
