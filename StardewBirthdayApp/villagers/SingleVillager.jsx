@@ -40,8 +40,16 @@ const styles = StyleSheet.create({
         height: 200,
         backgroundColor: `#007aa6`,
         borderRadius: 5,
+    },
+    birthdayContainer: {
+        alignItems: `center`,
+        justifyContent: `space-between`,
+        backgroundColor: `#007aa6`,
+        borderRadius: 5,
+        padding: 5,
+        margin: 5,
+        width: 200,
     }
-
 })
 
 const matchingGifts = (gifts) => {
@@ -66,11 +74,12 @@ function SingleVillager({navigation, route}) {
     <SafeAreaView style={styles.container}>
         <Image style={styles.villagerImage}source={route.params.image} />
         <Text style ={{fontSize:24, fontWeight:`bold`,}}>{route.params.name}</Text>
-        <View>
+        <View style={styles.birthdayContainer}>
+            <Text style ={styles.villagerText}>Birthday</Text>
             <Text style ={styles.villagerText}>Season: {route.params.birthSeason}</Text>
             <Text style ={styles.villagerText}>Day: {route.params.birthDay}</Text>
-            <Text style ={styles.villagerText}>Gifts</Text>
         </View>
+        <Text style ={{fontSize:24, fontWeight:`bold`,}}>Gifts</Text>
         <FlatList
             data={giftArray}
             numColumns={3}
