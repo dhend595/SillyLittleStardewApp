@@ -5,7 +5,7 @@ import {
     StyleSheet,
     Text,
     Image,
-    Button,
+    SafeAreaView,
     Pressable
 } from 'react-native';
 import allGifts from '../dataObjects/item-data';
@@ -63,7 +63,7 @@ const matchingGifts = (gifts) => {
 function SingleVillager({navigation, route}) {
     const giftArray = matchingGifts(route.params.gifts);
     return(
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
         <Image style={styles.villagerImage}source={route.params.image} />
         <Text style ={{fontSize:24, fontWeight:`bold`,}}>{route.params.name}</Text>
         <View>
@@ -85,7 +85,7 @@ function SingleVillager({navigation, route}) {
         <Pressable style={{backgroundColor:`#007aa6`, padding:10, borderRadius:5, marginTop:10}} onPress={() => navigation.goBack()}>
             <Text style={{fontSize:18, fontWeight:`bold`}}>Back to Villagers</Text>
         </Pressable>
-    </View>
+    </SafeAreaView>
     )
 }
 

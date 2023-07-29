@@ -16,25 +16,34 @@ export default function AllVillagers({navigation}) {
     const styles = StyleSheet.create({
         container: {
             flex: 1,
-            flexDirection: 'row',
+            flexDirection: 'Column',
             backgroundColor: `#0099D0`,
+            alignItems: `center`,
+            justifyContent: `center`,
         },
         flatList: {
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            justifyContent: `space-around`
+            // flexDirection: 'row',
+            // numColumns: 5,
+            justifyContent: `space-around`,
         },
         villagerCard: {
+            width: 175,
+            height: 175,
             backgroundColor: `#007aa6`,
             borderRadius: 5,
             justifyContent: `center`,
-            marginTop: 5,
+            margin: 10,
             alignItems: `center`,
         },
         villagerText: {
-            padding: 5,
+            paddingTop: 10,
             fontSize: 18,
             fontWeight: `bold`
+        },
+        headerText: {
+            fontSize: 30,
+            fontWeight: `bold`,
+            textAlign: `center`
         }
     })
 
@@ -59,7 +68,10 @@ export default function AllVillagers({navigation}) {
 
     return (
         <SafeAreaView style={styles.container}>
+            <Text style={styles.headerText}>All Villagers</Text>
             <FlatList
+                horizontal={false}
+                numColumns={2}
                 contentContainerStyle={styles.flatList}
                 data={allVillagers}
                 renderItem={({ item }) =>

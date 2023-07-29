@@ -38,9 +38,16 @@ function MainContainer() {
           },
         })}>
 
-        <Tab.Screen name={home} component={HomeScreen} />
-        <Tab.Screen name={villagers} component={AllVillagersStack} />
-        <Tab.Screen name={saved} component={SavedVillagers} />
+        <Tab.Screen name={home} component={HomeScreen} options={{
+          headerShown: false,
+        }}/>
+        <Tab.Screen name={villagers} component={AllVillagersStack} options={{
+          headerShown: false,
+        }}
+        />
+        <Tab.Screen name={saved} component={SavedVillagers} options={{
+          headerShown: false,
+        }}/>
 
       </Tab.Navigator>
   );
