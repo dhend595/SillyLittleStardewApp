@@ -4,7 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Screens
 import HomeScreen from './Screens/Home'
-import AllVillagersStack from './Screens/AllVillagers';
+import AllVillagersStack from './Screens/Villagers';
 import SavedVillagers from './Screens/Saved';
 
 //Screen names
